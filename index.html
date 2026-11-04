@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- ניהול תקציב · © 2026 בנימין אמבאו · כל הזכויות שמורות -->
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ניהול תקציב · מתחילים</title>
+<meta name="description" content="חמישה שלבים לניהול כסף עצמאי: מדריך, קובץ אקסל ואפליקציה. בחינם, בלי הרשמה, והנתונים נשארים אצלכם.">
+<meta property="og:title" content="ניהול תקציב · מתחילים לנהל את הכסף">
+<meta property="og:description" content="חמישה שלבים, מהבנת ההכנסות וההוצאות ועד אפליקציה לניהול התקציב. בחינם ובלי הרשמה.">
+<meta property="og:image" content="https://nihul-taktziv.github.io/maatafot/icon-512.png">
+<meta name="theme-color" content="#4450C2">
+<link rel="icon" type="image/png" href="https://nihul-taktziv.github.io/maatafot/icon-192.png">
+<link rel="apple-touch-icon" href="https://nihul-taktziv.github.io/maatafot/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C1F33; --ink-2:#5B5F78; --line:#E2E4EE; --paper:#F4F5F9; --surface:#fff;
+  --seal:#4A55C9; --seal-strong:#4A55C9; --seal-soft:#E4E7FA; --hero-a:#4450C2; --hero-b:#6F79E2;
+  --ok:#1F8A5B; --ok-soft:#E3F4EC; --amber:#A8721A; --amber-soft:#FBF0DD;
+  --shadow:0 1px 2px rgba(20,24,60,.05),0 8px 24px rgba(20,24,60,.07);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#ECEEF8; --ink-2:#A6AAC4; --line:#2A2E47; --paper:#0E1020; --surface:#171A2E;
+    --seal:#8F98F5; --seal-strong:#5560D6; --seal-soft:#23285A; --ok:#5FD3A0; --ok-soft:#173828; --amber:#E2B15A; --amber-soft:#3A2E17;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Assistant",system-ui,sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Rubik","Assistant",sans-serif;margin:0;letter-spacing:-.3px;line-height:1.2}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* hero */
+.hero{color:#fff;background:linear-gradient(160deg,var(--hero-a) 0%,#5560D6 52%,var(--hero-b) 100%);position:relative;overflow:hidden;padding:44px 0 92px}
+.hero::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;border:60px solid rgba(255,255,255,.07);left:-220px;bottom:-260px}
+.hero::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;border:32px solid rgba(255,255,255,.06);right:-90px;top:-90px}
+.hero .wrap{position:relative;z-index:1}
+.logo{width:76px;height:76px;border-radius:22px;background:rgba(255,255,255,.14);display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.logo svg{width:60px;height:60px}
+.kick{margin-top:22px;font-weight:600;opacity:.9}
+.hero h1{font-size:clamp(32px,7vw,46px);margin:4px 0 12px;color:#fff}
+.hero p{margin:0;max-width:34em;font-size:18px;opacity:.95}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding:0;list-style:none}
+.chips li{border:1.5px solid rgba(255,255,255,.5);border-radius:99px;padding:4px 14px;font-size:15px}
+
+/* progress */
+.prog{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);padding:18px 20px;margin-top:-60px;position:relative;z-index:2}
+.prog-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.prog-top b{font-family:"Rubik";font-size:18px}
+.prog-top span{color:var(--ink-2);font-size:15px}
+.bar{height:10px;border-radius:99px;background:var(--seal-soft);overflow:hidden;margin-top:12px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--hero-b),var(--seal));border-radius:99px;transition:width .4s}
+.dots{display:flex;justify-content:space-between;margin-top:10px;padding:0;list-style:none}
+.dots a{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--paper);color:var(--ink-2);font-weight:700;font-family:"Rubik";text-decoration:none;border:2px solid var(--line);font-size:15px}
+.dots a.cur{border-color:var(--seal);color:var(--seal);background:var(--seal-soft)}
+.dots a.done{background:var(--ok);border-color:var(--ok);color:#fff}
+
+/* intro */
+.intro{margin:28px 0 8px}
+.intro h2{font-size:24px;margin-bottom:6px}
+.intro p{margin:0;color:var(--ink-2)}
+
+/* steps */
+.steps{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.step{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);padding:20px;border:2px solid transparent;scroll-margin-top:16px}
+.step.cur{border-color:var(--seal)}
+.s-head{display:flex;gap:14px;align-items:flex-start}
+.num{flex:none;width:46px;height:46px;border-radius:14px;background:var(--seal-soft);color:var(--seal);display:grid;place-items:center;font-family:"Rubik";font-weight:700;font-size:20px}
+.step.cur .num{background:var(--seal-strong);color:#fff}
+.step.done .num{background:var(--ok);color:#fff}
+.s-head small{display:block;color:var(--ink-2);font-size:14px}
+.s-head h3{font-size:21px;margin-top:2px}
+.tag{display:inline-block;margin-top:6px;font-size:13.5px;font-weight:600;border-radius:99px;padding:2px 10px;background:var(--paper);color:var(--ink-2)}
+.step.cur .tag.now{background:var(--seal-soft);color:var(--seal)}
+.step.done .tag.now{background:var(--ok-soft);color:var(--ok)}
+.s-body{margin-top:12px}
+.s-body p{margin:0 0 10px}
+.s-list{margin:0 0 12px;padding-inline-start:20px}
+.s-list li{margin:3px 0}
+.next{background:var(--paper);border-radius:12px;padding:10px 14px;font-size:15.5px;margin:0 0 14px}
+.next b{color:var(--seal)}
+.note{background:var(--amber-soft);border-radius:12px;padding:10px 14px;font-size:15.5px;margin:0 0 14px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:14px;font:700 17px "Assistant",sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn-p{background:var(--seal-strong);color:#fff;flex:1 1 220px}
+.btn-g{background:var(--paper);color:var(--ink);border:1.5px solid var(--line);flex:0 1 auto}
+.step.done .btn-g{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.btn:focus-visible{outline:3px solid var(--hero-b);outline-offset:2px}
+.step.done .s-body{display:none}
+.step.done.open .s-body{display:block}
+.reopen{display:none;margin-top:10px;background:none;border:0;color:var(--seal);font:600 15.5px "Assistant",sans-serif;padding:4px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.step.done .reopen{display:inline-block}
+
+.app-box{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.qr{flex:none;width:132px;height:132px;background:#fff;border-radius:14px;padding:8px;border:1px solid var(--line)}
+.qr svg{width:100%;height:100%;display:block}
+.app-box .txt{flex:1 1 220px}
+.app-box .txt p{margin:0 0 8px}
+
+.finish{display:none;margin-top:14px;background:var(--ok-soft);color:var(--ink);border-radius:20px;padding:18px 20px}
+.finish.on{display:block}
+.finish h3{color:var(--ok);font-size:20px;margin-bottom:4px}
+.finish p{margin:0}
+
+.faq{margin:30px 0 0}
+.faq h2{font-size:22px;margin-bottom:10px}
+details{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);margin-bottom:10px;padding:0 16px}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--seal);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 14px;color:var(--ink-2)}
+
+footer{margin:34px 0 0;padding:22px 0 30px;border-top:1px solid var(--line);color:var(--ink-2);font-size:14px;text-align:center}
+footer p{margin:0 0 6px}
+footer .c{font-weight:600;color:var(--ink)}
+footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",sans-serif;text-decoration:underline;cursor:pointer;padding:4px}
+@media (prefers-reduced-motion: reduce){ .bar i{transition:none} }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="logo" aria-hidden="true"><svg viewBox="212 212 600 600" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBE6A6"/><stop offset="1" stop-color="#D9A93F"/></linearGradient><linearGradient id="lgh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#E0B24A"/><stop offset="1" stop-color="#FCE8AC"/></linearGradient></defs><path d="M 690 300 A 282 282 0 1 0 794 512" fill="none" stroke="url(#lgh)" stroke-width="30" stroke-linecap="round"/><rect x="352" y="520" width="78" height="170" rx="14" fill="url(#lg)"/><rect x="456" y="440" width="78" height="250" rx="14" fill="url(#lg)"/><rect x="560" y="350" width="78" height="340" rx="14" fill="url(#lg)"/><path d="M 300 470 C 420 440 560 380 690 262" fill="none" stroke="url(#lgh)" stroke-width="30" stroke-linecap="round"/><path d="M 610 250 L 724 230 L 700 344 Z" fill="#FCE8AC" stroke="#FCE8AC" stroke-width="14" stroke-linejoin="round"/><circle cx="676" cy="652" r="104" fill="url(#lg)" stroke="#5A63CF" stroke-width="12"/><g fill="none" stroke="#3A44A8" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"><path d="M 628 702 L 628 604 L 676 604 Q 700 604 700 628 L 700 668"/><path d="M 724 602 L 724 700 L 676 700 Q 652 700 652 676 L 652 636"/></g></svg></div>
+    <div class="kick">ניהול תקציב</div>
+    <h1>מתחילים לנהל את הכסף</h1>
+    <p>חמישה שלבים, לפי הסדר: מבינים כמה נכנס ולאן זה הולך, בונים תקציב שמחזיק, ומנהלים אותו באפליקציה בכל יום.</p>
+    <ul class="chips"><li>5 שלבים</li><li>בחינם</li><li>בלי הרשמה</li><li>הנתונים נשארים אצלכם</li></ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="prog" aria-label="ההתקדמות שלך">
+    <div class="prog-top"><b id="progTxt">שלב 1 מתוך 5</b><span id="progSub">מתחילים מהמדריך</span></div>
+    <div class="bar" aria-hidden="true"><i id="progBar"></i></div>
+    <ol class="dots" id="dots">
+      <li><a href="#s1" data-i="1" aria-label="שלב 1">1</a></li><li><a href="#s2" data-i="2" aria-label="שלב 2">2</a></li><li><a href="#s3" data-i="3" aria-label="שלב 3">3</a></li><li><a href="#s4" data-i="4" aria-label="שלב 4">4</a></li><li><a href="#s5" data-i="5" aria-label="שלב 5">5</a></li>
+    </ol>
+  </section>
+
+  <section class="intro">
+    <h2>איך זה עובד</h2>
+    <p>עוברים על השלבים לפי הסדר. בסוף כל שלב לוחצים "סיימתי", והדף יזכור איפה עצרתם, גם אם תחזרו אחרי כמה ימים.</p>
+  </section>
+
+  <ol class="steps">
+    <li class="step" id="s1" data-i="1">
+      <div class="s-head"><span class="num">1</span><div><small>שלב 1 · כ-40 דקות קריאה</small><h3>מבינים את השיטה</h3><span class="tag now"></span></div></div>
+      <div class="s-body">
+        <p>קוראים את <b>המדריך להתנהלות כלכלית נכונה</b>. הוא מסביר, צעד אחר צעד, איך מבינים את ההכנסות וההוצאות ובונים תקציב שמחזיק.</p>
+        <ul class="s-list"><li>8 שלבים, עם דוגמאות מספריות</li><li>דף עבודה למילוי</li><li>עדיף להדפיס או לקרוא במחשב</li></ul>
+        <p class="next"><b>מתי עוברים הלאה?</b> כשקראתם את כל השלבים ואתם מבינים מה צריך לאסוף: תלושים ודפי חשבון של שלושה חודשים.</p>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/guide.pdf" target="_blank" rel="noopener">📘 הורדת המדריך (PDF)</a><button class="btn btn-g" data-done="1">סיימתי ✓</button></div>
+      </div>
+      <button class="reopen" data-open="1">פתיחה מחדש</button>
+    </li>
+
+    <li class="step" id="s2" data-i="2">
+      <div class="s-head"><span class="num">2</span><div><small>שלב 2 · כ-15 דקות קריאה</small><h3>מכירים את קובץ האקסל</h3><span class="tag now"></span></div></div>
+      <div class="s-body">
+        <p>קוראים את <b>המדריך לקובץ האקסל</b>. בכל עמוד יש צילום של גיליון אחד, עם הסבר מה ממלאים, מה מחושב לבד ואיך קוראים את התוצאה.</p>
+        <ul class="s-list"><li>עמוד לכל גיליון</li><li>הודעות שעלולות להופיע, ומה עושים</li><li>טעויות נפוצות</li></ul>
+        <p class="next"><b>מתי עוברים הלאה?</b> כשברור לכם שממלאים רק את התאים הצהובים, ושהגיליון האחרון מראה מה מזינים באפליקציה.</p>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/madrich-excel.pdf" target="_blank" rel="noopener">📗 הורדת מדריך האקסל (PDF)</a><button class="btn btn-g" data-done="2">סיימתי ✓</button></div>
+      </div>
+      <button class="reopen" data-open="2">פתיחה מחדש</button>
+    </li>
+
+    <li class="step" id="s3" data-i="3">
+      <div class="s-head"><span class="num">3</span><div><small>שלב 3 · כשעה, עם הנתונים מולכם</small><h3>בונים את התקציב באקסל</h3><span class="tag now"></span></div></div>
+      <div class="s-body">
+        <p>מורידים את <b>קובץ האקסל</b>, ופותחים לידו את מדריך האקסל. עוברים על הגיליונות לפי הסדר, ומחליפים את המספרים הצהובים בנתונים שלכם.</p>
+        <ul class="s-list"><li>שלושה חודשים של הכנסות והוצאות</li><li>הקובץ מחשב הכול לבד ומראה אם התקציב מחזיק</li><li>הקובץ נשאר אצלכם ולא נשלח לשום מקום</li></ul>
+        <p class="note">💻 הכי נוח למלא במחשב, ב-Excel, Numbers או Google Sheets. בטלפון צריך את אפליקציית Excel.</p>
+        <p class="next"><b>מתי עוברים הלאה?</b> כשבגיליון האחרון, "9 מה מזינים באתר", כתוב שהתכנון מתאים להכנסה.</p>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/budget-planning.xlsx" download>📊 הורדת קובץ האקסל</a><button class="btn btn-g" data-done="3">סיימתי ✓</button></div>
+      </div>
+      <button class="reopen" data-open="3">פתיחה מחדש</button>
+    </li>
+
+    <li class="step" id="s4" data-i="4">
+      <div class="s-head"><span class="num">4</span><div><small>שלב 4 · כ-5 דקות</small><h3>מתקינים את האפליקציה</h3><span class="tag now"></span></div></div>
+      <div class="s-body">
+        <p>קוראים את <b>מדריך ההתקנה</b> ומתקינים את האפליקציה בטלפון. לא צריך חנות אפליקציות: מוסיפים אותה למסך הבית, והיא עובדת גם בלי אינטרנט.</p>
+        <ul class="s-list"><li>אייפון: בספארי ← שיתוף ← "הוסף למסך הבית"</li><li>אנדרואיד: בכרום ← תפריט ← "התקנת אפליקציה"</li><li>במדריך גם גיבוי ונעילה בקוד</li></ul>
+        <p class="next"><b>מתי עוברים הלאה?</b> כשהאייקון של "ניהול תקציב" מופיע במסך הבית של הטלפון.</p>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/madrich-hatkana.pdf" target="_blank" rel="noopener">📲 הורדת מדריך ההתקנה (PDF)</a><button class="btn btn-g" data-done="4">סיימתי ✓</button></div>
+      </div>
+      <button class="reopen" data-open="4">פתיחה מחדש</button>
+    </li>
+
+    <li class="step" id="s5" data-i="5">
+      <div class="s-head"><span class="num">5</span><div><small>שלב 5 · 10 דקות הקמה, ואז כמה שניות ביום</small><h3>מתחילים לנהל את הכסף</h3><span class="tag now"></span></div></div>
+      <div class="s-body">
+        <div class="app-box">
+          <div class="qr" aria-label="קוד QR לפתיחת האפליקציה בטלפון"><svg role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path stroke="#1c1f33" d="M2 2.5h7m5 0h3m2 0h2m3 0h7m-29 1h1m5 0h1m1 0h1m3 0h1m4 0h1m4 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h3m2 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h3m1 0h2m3 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m5 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m4 0h1m1 0h2m1 0h1m1 0h1m3 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h2m1 0h2m6 0h2m-21 1h1m5 0h1m1 0h3m2 0h3m1 0h1m2 0h3m2 0h3m-28 1h1m6 0h4m1 0h4m3 0h1m3 0h2m1 0h2m-28 1h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h4m3 0h1m1 0h3m-21 1h1m2 0h1m2 0h1m1 0h1m1 0h1m3 0h1m4 0h3m-26 1h1m2 0h1m1 0h3m3 0h2m2 0h2m3 0h3m5 0h1m-28 1h2m4 0h2m5 0h7m1 0h3m2 0h2m-29 1h1m2 0h2m1 0h2m1 0h1m1 0h2m1 0h3m1 0h1m3 0h1m1 0h3m-23 1h1m3 0h4m2 0h1m3 0h5m3 0h1m1 0h1m-29 1h3m2 0h4m1 0h1m2 0h1m3 0h1m1 0h2m4 0h2m-27 1h2m5 0h1m5 0h1m1 0h2m2 0h6m1 0h3m-29 1h2m2 0h4m2 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h2m2 0h1m-29 1h1m1 0h2m10 0h3m3 0h1m-21 1h1m1 0h1m3 0h2m3 0h2m4 0h1m2 0h5m1 0h3m-21 1h2m1 0h1m2 0h3m1 0h3m3 0h2m-26 1h7m2 0h1m1 0h1m3 0h6m1 0h1m1 0h3m-27 1h1m5 0h1m2 0h2m1 0h1m2 0h2m1 0h3m3 0h1m2 0h1m-28 1h1m1 0h3m1 0h1m4 0h1m1 0h2m1 0h1m1 0h8m1 0h1m-28 1h1m1 0h3m1 0h1m3 0h3m2 0h7m3 0h2m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m3 0h4m2 0h8m-28 1h1m5 0h1m3 0h5m1 0h1m1 0h1m3 0h1m2 0h2m1 0h1m-29 1h7m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1m2 0h1"/></svg>
+</div>
+          <div class="txt">
+            <p>פותחים את האפליקציה מהאייקון, ומעתיקים אליה את מה שיצא בגיליון 9 באקסל, מלמעלה למטה. מכאן רושמים כל הוצאה, ורואים בכל רגע כמה נשאר להוציא עד סוף החודש.</p>
+            <p style="color:var(--ink-2);font-size:15px">קוראים את הדף במחשב? סורקים את הקוד עם מצלמת הטלפון.</p>
+          </div>
+        </div>
+        <p class="next"><b>ומה הלאה?</b> רושמים הוצאות כל יום-יומיים, ובסוף החודש פותחים את "ניתוח החודש" באפליקציה. שומרים גיבוי פעם בחודש.</p>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/" target="_blank" rel="noopener">🚀 פתיחת האפליקציה</a><button class="btn btn-g" data-done="5">סיימתי ✓</button></div>
+      </div>
+      <button class="reopen" data-open="5">פתיחה מחדש</button>
+    </li>
+  </ol>
+
+  <div class="finish" id="finish" role="status">
+    <h3>🎉 סיימתם את כל השלבים</h3>
+    <p>מעכשיו העבודה היומיומית נעשית באפליקציה. כל שלושה חודשים, או כשמשהו גדול משתנה, חוזרים לקובץ האקסל ובודקים שהתוכנית עדיין מחזיקה.</p>
+  </div>
+
+  <section class="faq">
+    <h2>שאלות נפוצות</h2>
+    <details><summary>זה עולה כסף?</summary><p>לא. המדריכים, קובץ האקסל והאפליקציה זמינים בחינם.</p></details>
+    <details><summary>מישהו רואה את הנתונים שלי?</summary><p>לא. אין הרשמה ואין שרת. קובץ האקסל נשאר במחשב שלכם, והנתונים באפליקציה נשמרים רק בטלפון. לכן חשוב לשמור גיבוי פעם בחודש: בהגדרות ← שמירת גיבוי.</p></details>
+    <details><summary>חייבים לעבור את כל השלבים?</summary><p>מומלץ מאוד. אפשר להתחיל ישר מהאפליקציה, אבל תקציב שנבנה עם נתונים אמיתיים של שלושה חודשים מחזיק הרבה יותר טוב מתקציב שנבנה "בערך".</p></details>
+    <details><summary>אין לי מחשב</summary><p>אפשר לעשות הכול מהטלפון. המדריכים נפתחים בטלפון, ואת קובץ האקסל ממלאים באפליקציית Excel החינמית. זה פחות נוח, אבל עובד.</p></details>
+    <details><summary>אני במינוס או עם הלוואות. זה מתאים לי?</summary><p>כן. יש במדריך ובקובץ שלב שלם על יציאה מהמינוס, ובאפליקציה מעקב אחרי הלוואות. אם המצב קשה, כדאי לשלב גם ליווי של איש מקצוע.</p></details>
+  </section>
+
+  <footer>
+    <p>המדריכים, הקובץ והאפליקציה הם מידע כללי לניהול תקציב אישי, ואינם ייעוץ פנסיוני, ייעוץ השקעות או ייעוץ אשראי המותאם אישית.</p>
+    <p class="c">© 2026 בנימין אמבאו · כל הזכויות שמורות</p>
+    <button class="reset" id="reset">להתחיל את השלבים מההתחלה</button>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var KEY = "maatafot-start-v1", N = 5;
+  var done = {};
+  try{ done = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; }catch(e){ done = {}; }
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(done)); }catch(e){} }
+  function current(){ for(var i = 1; i <= N; i++) if(!done[i]) return i; return 0; }
+  var SUB = ["", "מתחילים מהמדריך", "מכירים את קובץ האקסל", "בונים את התקציב באקסל", "מתקינים את האפליקציה", "מתחילים לנהל את הכסף"];
+  function render(){
+    var cur = current(), count = 0;
+    for(var i = 1; i <= N; i++) if(done[i]) count++;
+    document.querySelectorAll(".step").forEach(function(el){
+      var i = +el.dataset.i;
+      el.classList.toggle("done", !!done[i]);
+      el.classList.toggle("cur", i === cur);
+      el.querySelector(".tag.now").textContent = done[i] ? "✓ הושלם" : (i === cur ? "השלב שלכם עכשיו" : "בהמשך");
+      var b = el.querySelector("[data-done]"); b.textContent = done[i] ? "✓ הושלם · ביטול" : "סיימתי ✓";
+    });
+    document.querySelectorAll("#dots a").forEach(function(a){ var i = +a.dataset.i; a.classList.toggle("done", !!done[i]); a.classList.toggle("cur", i === cur); });
+    document.getElementById("progBar").style.width = (count / N * 100) + "%";
+    document.getElementById("progTxt").textContent = cur ? "שלב " + cur + " מתוך " + N : "כל 5 השלבים הושלמו";
+    document.getElementById("progSub").textContent = cur ? SUB[cur] : "🎉 כל הכבוד";
+    document.getElementById("finish").classList.toggle("on", !cur);
+  }
+  document.addEventListener("click", function(e){
+    var d = e.target.closest("[data-done]"), o = e.target.closest("[data-open]");
+    if(d){
+      var i = +d.dataset.done;
+      if(done[i]) delete done[i]; else done[i] = Date.now();
+      save(); render();
+      var st = document.getElementById("s" + i); st.classList.remove("open");
+      var cur = current();
+      if(done[i] && cur){ var nx = document.getElementById("s" + cur); nx.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }
+      if(!cur) document.getElementById("finish").scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    if(o){ var s = document.getElementById("s" + o.dataset.open); s.classList.toggle("open"); o.textContent = s.classList.contains("open") ? "סגירה" : "פתיחה מחדש"; }
+  });
+  document.getElementById("reset").onclick = function(){ done = {}; save(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  render();
+})();
+</script>
+</body>
+</html>
