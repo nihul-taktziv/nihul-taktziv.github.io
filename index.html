@@ -8,7 +8,15 @@
 <meta name="description" content="חמישה שלבים לניהול כסף עצמאי: מדריך, קובץ אקסל ואפליקציה. בחינם, בלי הרשמה, והנתונים נשארים אצלכם.">
 <meta property="og:title" content="ניהול פיננסי · מתחילים לנהל את הכסף">
 <meta property="og:description" content="חמישה שלבים, מהבנת ההכנסות וההוצאות ועד אפליקציה לניהול התקציב. בחינם ובלי הרשמה.">
-<meta property="og:image" content="https://nihul-taktziv.github.io/maatafot/icon-512.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nihul-taktziv.github.io/">
+<meta property="og:locale" content="he_IL">
+<meta property="og:image" content="https://nihul-taktziv.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ניהול פיננסי: מסך הבית של האפליקציה, עם כמה נשאר להוציא ולאן הכסף הולך">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nihul-taktziv.github.io/og.jpg">
 <meta name="theme-color" content="#4450C2">
 <link rel="icon" type="image/png" href="https://nihul-taktziv.github.io/maatafot/icon-192.png">
 <link rel="apple-touch-icon" href="https://nihul-taktziv.github.io/maatafot/icon-180.png">
@@ -121,6 +129,18 @@ footer p{margin:0 0 6px}
 footer .c{font-weight:600;color:var(--ink)}
 footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",sans-serif;text-decoration:underline;cursor:pointer;padding:4px}
 @media (prefers-reduced-motion: reduce){ .bar i{transition:none} }
+/* screenshots */
+.shots{margin:28px 0 4px}
+.shots h2{font-size:24px;margin-bottom:6px}
+.shots>p{margin:0;color:var(--ink-2)}
+.shot-row{list-style:none;margin:16px -16px 0;padding:4px 16px 10px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.shot-row::-webkit-scrollbar{display:none}
+.shot{flex:0 0 220px;scroll-snap-align:center;text-align:center}
+.frame{background:#14162B;border-radius:34px;padding:8px;box-shadow:var(--shadow)}
+.frame img{display:block;width:100%;height:auto;aspect-ratio:390/844;border-radius:27px;background:var(--paper)}
+.shot b{display:block;margin-top:12px;font-family:"Rubik","Assistant",sans-serif;font-size:17px}
+.shot span{display:block;color:var(--ink-2);font-size:14.5px;line-height:1.45;margin-top:2px}
+@media (min-width:720px){ .shot-row{justify-content:center;overflow:visible} }
 </style>
 </head>
 <body>
@@ -141,6 +161,16 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
     <ol class="dots" id="dots">
       <li><a href="#s1" data-i="1" aria-label="שלב 1">1</a></li><li><a href="#s2" data-i="2" aria-label="שלב 2">2</a></li><li><a href="#s3" data-i="3" aria-label="שלב 3">3</a></li><li><a href="#s4" data-i="4" aria-label="שלב 4">4</a></li><li><a href="#s5" data-i="5" aria-label="שלב 5">5</a></li>
     </ol>
+  </section>
+
+  <section class="shots" aria-label="צילומי מסך של האפליקציה">
+    <h2>ככה זה נראה</h2>
+    <p>האפליקציה שתנהלו בה את הכסף בשלב 5.</p>
+    <ul class="shot-row">
+      <li class="shot"><div class="frame"><img src="img/home.webp" width="390" height="844" alt="דף הבית: כמה נשאר להוציא עד סוף החודש, וגרף של לאן הלך הכסף" loading="lazy"></div><b>כמה נשאר להוציא</b><span>מספר אחד ברור, וגרף של לאן הלך הכסף</span></li>
+      <li class="shot"><div class="frame"><img src="img/expenses.webp" width="390" height="844" alt="דף ההוצאות: תקציב לכל קטגוריה וכמה נשאר בה" loading="lazy"></div><b>תקציב לכל קטגוריה</b><span>רואים מיד איפה עוד יש מקום ואיפה מתקרבים לגבול</span></li>
+      <li class="shot"><div class="frame"><img src="img/saving.webp" width="390" height="844" alt="דף החיסכון: חיסכון בכל חודש מול היעד" loading="lazy"></div><b>החיסכון לאורך השנה</b><span>כל חודש מול היעד, ומה צריך כדי להגיע אליו</span></li>
+    </ul>
   </section>
 
   <section class="intro">
