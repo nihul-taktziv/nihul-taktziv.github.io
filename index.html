@@ -150,9 +150,68 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
 .shot b{display:block;margin-top:12px;font-family:"Rubik","Assistant",sans-serif;font-size:17px}
 .shot span{display:block;color:var(--ink-2);font-size:14.5px;line-height:1.45;margin-top:2px}
 @media (min-width:720px){ .shot-row{justify-content:center;overflow:visible} }
+
+/* welcome screen */
+.welcome{min-height:100vh;min-height:100svh;color:#fff;background:linear-gradient(165deg,var(--hero-a) 0%,#5560D6 50%,var(--hero-b) 100%);position:relative;overflow:hidden;overflow:clip;display:flex;flex-direction:column}
+.welcome::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:70px solid rgba(255,255,255,.06);left:-260px;top:38%}
+.welcome::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:34px solid rgba(255,255,255,.07);right:-110px;top:-80px}
+.w-in{position:relative;z-index:1;padding-top:26px;padding-bottom:28px;display:flex;flex-direction:column;flex:1}
+.w-brand{display:flex;align-items:center;gap:10px;font-family:"Rubik","Assistant",sans-serif;font-weight:700;font-size:19px}
+.w-brand .logo{width:46px;height:46px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.w-brand .logo svg{width:36px;height:36px}
+.welcome h1{font-size:clamp(34px,9vw,52px);margin:22px 0 10px;color:#fff;line-height:1.12}
+.welcome h1 em{font-style:normal;color:#FCE8AC}
+.w-lead{margin:0;font-size:18px;opacity:.95;max-width:30em}
+.w-vis{position:relative;height:330px;margin:22px auto 6px;width:100%;max-width:360px}
+.w-ph{position:absolute;background:#14162B;border-radius:30px;padding:7px;box-shadow:0 24px 50px rgba(10,12,40,.35)}
+.w-ph img{display:block;width:100%;height:auto;border-radius:24px;aspect-ratio:390/844;object-fit:cover;object-position:top}
+.w-ph.front{width:168px;right:50%;margin-right:-104px;top:0;z-index:2;transform:rotate(-4deg)}
+.w-ph.back{width:146px;right:50%;margin-right:20px;top:34px;z-index:1;transform:rotate(7deg);opacity:.92}
+.w-badge{position:absolute;z-index:3;background:#fff;color:var(--ink-l,#1C1F33);border-radius:14px;padding:8px 12px;font-size:13.5px;font-weight:700;box-shadow:0 12px 28px rgba(10,12,40,.25);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.w-badge i{font-style:normal;font-size:16px}
+.w-badge.b1{left:4px;top:62px}
+.w-badge.b2{right:0;bottom:42px}
+.w-pts{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+.w-pts li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:12px 14px}
+.w-pts .ic{flex:none;width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:19px}
+.w-pts b{display:block;font-size:16.5px}
+.w-pts span{display:block;font-size:14.5px;opacity:.9;line-height:1.45}
+.w-cta{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;border-radius:16px;background:#fff;color:var(--hero-a);font:700 19px "Rubik","Assistant",sans-serif;text-decoration:none;box-shadow:0 14px 30px rgba(10,12,40,.25)}
+.w-cta{position:sticky;bottom:16px;z-index:5}
+.w-cta:active{transform:scale(.98)}
+.w-cta svg{width:20px;height:20px}
+.w-note{text-align:center;margin-top:12px;font-size:14px;opacity:.85}
+.w-copy{text-align:center;margin-top:auto;padding-top:18px;font-size:12.5px;opacity:.7}
+@media (min-width:720px){ .w-vis{height:380px;margin-bottom:24px} .w-ph.front{width:196px;margin-right:-122px} .w-ph.back{width:170px} .w-pts{grid-template-columns:repeat(3,1fr)} .w-pts li{flex-direction:column} }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .w-badge{background:#1E2240;color:#ECEEF8} }
+html:not(.on-steps) .hero, html:not(.on-steps) main{display:none}
+html.on-steps .welcome{display:none}
+.to-welcome{display:inline-block;margin-top:14px;color:#fff;opacity:.85;font-size:15px}
 </style>
+<script>if(location.hash && location.hash !== "#welcome") document.documentElement.classList.add("on-steps");</script>
 </head>
 <body>
+<section class="welcome" id="welcome" aria-label="ברוכים הבאים">
+  <div class="wrap w-in">
+    <div class="w-brand"><div class="logo" aria-hidden="true"><svg viewBox="212 212 600 600" aria-hidden="true"><defs><linearGradient id="wlg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBE6A6"/><stop offset="1" stop-color="#D9A93F"/></linearGradient><linearGradient id="wlgh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#E0B24A"/><stop offset="1" stop-color="#FCE8AC"/></linearGradient></defs><path d="M 690 300 A 282 282 0 1 0 794 512" fill="none" stroke="url(#wlgh)" stroke-width="30" stroke-linecap="round"/><rect x="352" y="520" width="78" height="170" rx="14" fill="url(#wlg)"/><rect x="456" y="440" width="78" height="250" rx="14" fill="url(#wlg)"/><rect x="560" y="350" width="78" height="340" rx="14" fill="url(#wlg)"/><path d="M 300 470 C 420 440 560 380 690 262" fill="none" stroke="url(#wlgh)" stroke-width="30" stroke-linecap="round"/><path d="M 610 250 L 724 230 L 700 344 Z" fill="#FCE8AC" stroke="#FCE8AC" stroke-width="14" stroke-linejoin="round"/><circle cx="676" cy="652" r="104" fill="url(#wlg)" stroke="#5A63CF" stroke-width="12"/><g fill="none" stroke="#3A44A8" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"><path d="M 628 702 L 628 604 L 676 604 Q 700 604 700 628 L 700 668"/><path d="M 724 602 L 724 700 L 676 700 Q 652 700 652 676 L 652 636"/></g></svg></div>ניהול פיננסי</div>
+    <h1>הכסף שלכם,<br><em>סוף סוף בשליטה</em></h1>
+    <p class="w-lead">מבינים לאן הולך הכסף, בונים תקציב שמחזיק, וחוסכים למטרות. הכול מהטלפון, בחינם ובלי הרשמה.</p>
+    <div class="w-vis" aria-hidden="true">
+      <div class="w-ph back"><img src="img/saving.webp" alt="" width="390" height="844"></div>
+      <div class="w-ph front"><img src="img/home.webp" alt="" width="390" height="844"></div>
+      <div class="w-badge b1"><i>✅</i>חויב אוטומטית</div>
+      <div class="w-badge b2"><i>🎯</i>דירה: 1,000 ₪ בחודש</div>
+    </div>
+    <ul class="w-pts">
+      <li><span class="ic">📊</span><div><b>רואים לאן הולך הכסף</b><span>כל הוצאה בקטגוריה שלה, וגרף ברור של החודש.</span></div></li>
+      <li><span class="ic">🗓️</span><div><b>תקציב שמחזיק</b><span>הוצאות קבועות, הלוואות ומשתנות במקום אחד, עם יום חיוב לכל תשלום.</span></div></li>
+      <li><span class="ic">🎯</span><div><b>חוסכים למטרות</b><span>מזינים יעד ותאריך, והאפליקציה מחשבת כמה לשים בצד כל חודש.</span></div></li>
+    </ul>
+    <a class="w-cta" href="#steps" id="wGo"><span id="wGoT">מתחילים · 5 שלבים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <p class="w-note">מדריך, קובץ אקסל ואפליקציה · הנתונים נשארים אצלכם</p>
+    <p class="w-copy">© 2026 בנימין אמבאו · כל הזכויות שמורות</p>
+  </div>
+</section>
 <header class="hero">
   <div class="wrap">
     <div class="logo" aria-hidden="true"><svg viewBox="212 212 600 600" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBE6A6"/><stop offset="1" stop-color="#D9A93F"/></linearGradient><linearGradient id="lgh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#E0B24A"/><stop offset="1" stop-color="#FCE8AC"/></linearGradient></defs><path d="M 690 300 A 282 282 0 1 0 794 512" fill="none" stroke="url(#lgh)" stroke-width="30" stroke-linecap="round"/><rect x="352" y="520" width="78" height="170" rx="14" fill="url(#lg)"/><rect x="456" y="440" width="78" height="250" rx="14" fill="url(#lg)"/><rect x="560" y="350" width="78" height="340" rx="14" fill="url(#lg)"/><path d="M 300 470 C 420 440 560 380 690 262" fill="none" stroke="url(#lgh)" stroke-width="30" stroke-linecap="round"/><path d="M 610 250 L 724 230 L 700 344 Z" fill="#FCE8AC" stroke="#FCE8AC" stroke-width="14" stroke-linejoin="round"/><circle cx="676" cy="652" r="104" fill="url(#lg)" stroke="#5A63CF" stroke-width="12"/><g fill="none" stroke="#3A44A8" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"><path d="M 628 702 L 628 604 L 676 604 Q 700 604 700 628 L 700 668"/><path d="M 724 602 L 724 700 L 676 700 Q 652 700 652 676 L 652 636"/></g></svg></div>
@@ -160,6 +219,7 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
     <h1>מתחילים לנהל את הכסף</h1>
     <p>חמישה שלבים, לפי הסדר: מבינים כמה נכנס ולאן זה הולך, בונים תקציב שמחזיק, ומנהלים אותו באפליקציה בכל יום.</p>
     <ul class="chips"><li>5 שלבים</li><li>בחינם</li><li>בלי הרשמה</li><li>הנתונים נשארים אצלכם</li></ul>
+    <a class="to-welcome" href="#">→ למסך הפתיחה</a>
   </div>
 </header>
 
@@ -325,6 +385,16 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
   });
   document.getElementById("reset").onclick = function(){ done = {}; save(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); };
   render();
+  /* welcome screen ↔ steps: #steps (or any step anchor) shows the steps, an empty hash shows the welcome */
+  function view(){
+    var steps = !!location.hash && location.hash !== "#welcome";
+    document.documentElement.classList.toggle("on-steps", steps);
+    if(location.hash === "#steps") window.scrollTo(0, 0);
+  }
+  var cur0 = current(), cnt0 = 0; for(var k = 1; k <= N; k++) if(done[k]) cnt0++;
+  document.getElementById("wGoT").textContent = !cur0 ? "לשלבים · כולם הושלמו" : cnt0 ? "ממשיכים משלב " + cur0 : "מתחילים · 5 שלבים";
+  window.addEventListener("hashchange", view);
+  view();
 })();
 </script>
 </body>
