@@ -124,6 +124,16 @@ summary::after{content:"+";color:var(--seal);font-size:22px;line-height:1}
 details[open] summary::after{content:"–"}
 details p{margin:0 0 14px;color:var(--ink-2)}
 
+.contact{margin:30px 0 0}
+.contact h2{font-size:22px;margin-bottom:10px}
+.ct-card{background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:18px 16px}
+.ct-card p{margin:0 0 4px;color:var(--ink-2)}
+.ct-name{display:block;font-size:18px;margin-bottom:12px}
+.ct-acts{display:flex;flex-wrap:wrap;gap:10px}
+.ct-acts .btn{flex:1 1 220px;min-width:0}
+.ct-wa{background:#1FA855;color:#fff}
+.ct-mail{background:var(--paper);color:var(--ink);border:1.5px solid var(--line);font-size:15.5px}
+.ct-mail bdi{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 footer{margin:34px 0 0;padding:22px 0 30px;border-top:1px solid var(--line);color:var(--ink-2);font-size:14px;text-align:center}
 footer p{margin:0 0 6px}
 footer .c{font-weight:600;color:var(--ink)}
@@ -169,7 +179,7 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
     <ul class="shot-row">
       <li class="shot"><div class="frame"><img src="img/home.webp" width="390" height="844" alt="דף הבית: כמה נשאר להוציא עד סוף החודש, וגרף של לאן הלך הכסף" loading="lazy"></div><b>כמה נשאר להוציא</b><span>מספר אחד ברור, וגרף של לאן הלך הכסף</span></li>
       <li class="shot"><div class="frame"><img src="img/expenses.webp" width="390" height="844" alt="דף ההוצאות: תקציב לכל קטגוריה וכמה נשאר בה" loading="lazy"></div><b>תקציב לכל קטגוריה</b><span>רואים מיד איפה עוד יש מקום ואיפה מתקרבים לגבול</span></li>
-      <li class="shot"><div class="frame"><img src="img/saving.webp" width="390" height="844" alt="דף החיסכון: חיסכון בכל חודש מול היעד" loading="lazy"></div><b>החיסכון לאורך השנה</b><span>כל חודש מול היעד, ומה צריך כדי להגיע אליו</span></li>
+      <li class="shot"><div class="frame"><img src="img/saving.webp" width="390" height="844" alt="דף החיסכון: סך הכול בחיסכון, וכל חודש מול היעד" loading="lazy"></div><b>החיסכון לאורך השנה</b><span>סך הכול בחיסכון, וכל חודש מול היעד</span></li>
     </ul>
   </section>
 
@@ -185,7 +195,7 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
         <p>קוראים את <b>המדריך להתנהלות כלכלית נכונה</b>. הוא מסביר, צעד אחר צעד, איך מבינים את ההכנסות וההוצאות ובונים תקציב שמחזיק.</p>
         <ul class="s-list"><li>8 שלבים, עם דוגמאות מספריות</li><li>דף עבודה למילוי</li><li>עדיף להדפיס או לקרוא במחשב</li></ul>
         <p class="next"><b>מתי עוברים הלאה?</b> כשקראתם את כל השלבים ואתם מבינים מה צריך לאסוף: תלושים ודפי חשבון של שלושה חודשים.</p>
-        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/guide.pdf" target="_blank" rel="noopener">📘 הורדת המדריך (PDF)</a><button class="btn btn-g" data-done="1">סיימתי ✓</button></div>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/guide.pdf?v=20261105b" target="_blank" rel="noopener">📘 הורדת המדריך (PDF)</a><button class="btn btn-g" data-done="1">סיימתי ✓</button></div>
       </div>
       <button class="reopen" data-open="1">פתיחה מחדש</button>
     </li>
@@ -196,7 +206,7 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
         <p>קוראים את <b>המדריך לקובץ האקסל</b>. בכל עמוד יש צילום של גיליון אחד, עם הסבר מה ממלאים, מה מחושב לבד ואיך קוראים את התוצאה.</p>
         <ul class="s-list"><li>עמוד לכל גיליון</li><li>הודעות שעלולות להופיע, ומה עושים</li><li>טעויות נפוצות</li></ul>
         <p class="next"><b>מתי עוברים הלאה?</b> כשברור לכם שממלאים רק את התאים הצהובים, ושהגיליון האחרון מראה מה מזינים באפליקציה.</p>
-        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/madrich-excel.pdf" target="_blank" rel="noopener">📗 הורדת מדריך האקסל (PDF)</a><button class="btn btn-g" data-done="2">סיימתי ✓</button></div>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/madrich-excel.pdf?v=20261105b" target="_blank" rel="noopener">📗 הורדת מדריך האקסל (PDF)</a><button class="btn btn-g" data-done="2">סיימתי ✓</button></div>
       </div>
       <button class="reopen" data-open="2">פתיחה מחדש</button>
     </li>
@@ -208,7 +218,7 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
         <ul class="s-list"><li>שלושה חודשים של הכנסות והוצאות</li><li>הקובץ מחשב הכול לבד ומראה אם התקציב מחזיק</li><li>הקובץ נשאר אצלכם ולא נשלח לשום מקום</li></ul>
         <p class="note">💻 הכי נוח למלא במחשב, ב-Excel, Numbers או Google Sheets. בטלפון צריך את אפליקציית Excel.</p>
         <p class="next"><b>מתי עוברים הלאה?</b> כשבגיליון האחרון, "9 מה מזינים באתר", כתוב שהתכנון מתאים להכנסה.</p>
-        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/budget-planning.xlsx" download>📊 הורדת קובץ האקסל</a><button class="btn btn-g" data-done="3">סיימתי ✓</button></div>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/budget-planning.xlsx?v=20261105b" download>📊 הורדת קובץ האקסל</a><button class="btn btn-g" data-done="3">סיימתי ✓</button></div>
       </div>
       <button class="reopen" data-open="3">פתיחה מחדש</button>
     </li>
@@ -219,13 +229,13 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
         <p>מורידים את <b>מדריך ההתקנה</b> וקוראים איך מתקינים את האפליקציה. לא צריך חנות אפליקציות: מוסיפים אותה למסך הבית של הטלפון, והיא עובדת גם בלי אינטרנט.</p>
         <ul class="s-list"><li>התקנה באייפון, באנדרואיד ובמחשב, צעד אחר צעד</li><li>איך שומרים גיבוי, כדי לא לאבד נתונים</li><li>איך מפעילים נעילה בקוד</li></ul>
         <p class="next"><b>מתי עוברים הלאה?</b> כשקראתם את החלק של הטלפון שלכם (אייפון או אנדרואיד) ואתם יודעים מה עושים.</p>
-        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/madrich-hatkana.pdf" target="_blank" rel="noopener">📲 הורדת מדריך ההתקנה (PDF)</a><button class="btn btn-g" data-done="4">סיימתי ✓</button></div>
+        <div class="acts"><a class="btn btn-p" href="https://nihul-taktziv.github.io/maatafot/madrich-hatkana.pdf?v=20261105b" target="_blank" rel="noopener">📲 הורדת מדריך ההתקנה (PDF)</a><button class="btn btn-g" data-done="4">סיימתי ✓</button></div>
       </div>
       <button class="reopen" data-open="4">פתיחה מחדש</button>
     </li>
 
     <li class="step" id="s5" data-i="5">
-      <div class="s-head"><span class="num">5</span><div><small>שלב 5 · 5 דקות התקנה ו-10 דקות הקמה</small><h3>מתקינים את האפליקציה</h3><span class="tag now"></span></div></div>
+      <div class="s-head"><span class="num">5</span><div><small>שלב 5 · 5 דקות התקנה ו-15 דקות הקמה</small><h3>מתקינים את האפליקציה</h3><span class="tag now"></span></div></div>
       <div class="s-body">
         <div class="app-box">
           <div class="qr" aria-label="קוד QR לפתיחת האפליקציה בטלפון"><svg role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33"><path stroke="#1c1f33" d="M2 2.5h7m5 0h3m2 0h2m3 0h7m-29 1h1m5 0h1m1 0h1m3 0h1m4 0h1m4 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h3m2 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h3m1 0h2m3 0h1m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m5 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m4 0h1m1 0h2m1 0h1m1 0h1m3 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h2m1 0h2m6 0h2m-21 1h1m5 0h1m1 0h3m2 0h3m1 0h1m2 0h3m2 0h3m-28 1h1m6 0h4m1 0h4m3 0h1m3 0h2m1 0h2m-28 1h1m1 0h2m1 0h2m2 0h1m1 0h1m1 0h4m3 0h1m1 0h3m-21 1h1m2 0h1m2 0h1m1 0h1m1 0h1m3 0h1m4 0h3m-26 1h1m2 0h1m1 0h3m3 0h2m2 0h2m3 0h3m5 0h1m-28 1h2m4 0h2m5 0h7m1 0h3m2 0h2m-29 1h1m2 0h2m1 0h2m1 0h1m1 0h2m1 0h3m1 0h1m3 0h1m1 0h3m-23 1h1m3 0h4m2 0h1m3 0h5m3 0h1m1 0h1m-29 1h3m2 0h4m1 0h1m2 0h1m3 0h1m1 0h2m4 0h2m-27 1h2m5 0h1m5 0h1m1 0h2m2 0h6m1 0h3m-29 1h2m2 0h4m2 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h1m1 0h2m2 0h1m-29 1h1m1 0h2m10 0h3m3 0h1m-21 1h1m1 0h1m3 0h2m3 0h2m4 0h1m2 0h5m1 0h3m-21 1h2m1 0h1m2 0h3m1 0h3m3 0h2m-26 1h7m2 0h1m1 0h1m3 0h6m1 0h1m1 0h3m-27 1h1m5 0h1m2 0h2m1 0h1m2 0h2m1 0h3m3 0h1m2 0h1m-28 1h1m1 0h3m1 0h1m4 0h1m1 0h2m1 0h1m1 0h8m1 0h1m-28 1h1m1 0h3m1 0h1m3 0h3m2 0h7m3 0h2m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h2m3 0h4m2 0h8m-28 1h1m5 0h1m3 0h5m1 0h1m1 0h1m3 0h1m2 0h2m1 0h1m-29 1h7m1 0h1m1 0h2m1 0h1m3 0h1m1 0h1m3 0h1m2 0h1"/></svg>
@@ -233,7 +243,7 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
           <div class="txt">
             <p>פותחים את האפליקציה בטלפון ומתקינים אותה לפי המדריך:</p>
             <ul class="s-list"><li><b>אייפון:</b> בספארי ← כפתור השיתוף ← "הוסף למסך הבית"</li><li><b>אנדרואיד:</b> בכרום ← תפריט ⋮ ← "התקנת אפליקציה"</li></ul>
-            <p>אחר כך פותחים מהאייקון ומעתיקים לאפליקציה את מה שיצא בגיליון 9 באקסל, מלמעלה למטה.</p>
+            <p>אחר כך פותחים מהאייקון ומעתיקים לאפליקציה את מה שיצא בגיליון 9 באקסל, מסך 1 עד מסך 6: הכנסה, מטרת החיסכון, מטרות נוספות, הוצאות קבועות עם יום חיוב, הלוואות וקטגוריות. ההחזר של כל הלוואה וההפרשה לכל מטרה מחושבים לבד.</p>
             <p style="color:var(--ink-2);font-size:15px">קוראים את הדף במחשב? סורקים את הקוד עם מצלמת הטלפון.</p>
           </div>
         </div>
@@ -255,7 +265,19 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
     <details><summary>מישהו רואה את הנתונים שלי?</summary><p>לא. אין הרשמה ואין שרת. קובץ האקסל נשאר במחשב שלכם, והנתונים באפליקציה נשמרים רק בטלפון. לכן חשוב לשמור גיבוי פעם בחודש: בהגדרות ← שמירת גיבוי.</p></details>
     <details><summary>חייבים לעבור את כל השלבים?</summary><p>מומלץ מאוד. אפשר להתחיל ישר מהאפליקציה, אבל תקציב שנבנה עם נתונים אמיתיים של שלושה חודשים מחזיק הרבה יותר טוב מתקציב שנבנה "בערך".</p></details>
     <details><summary>אין לי מחשב</summary><p>אפשר לעשות הכול מהטלפון. המדריכים נפתחים בטלפון, ואת קובץ האקסל ממלאים באפליקציית Excel החינמית. זה פחות נוח, אבל עובד.</p></details>
-    <details><summary>אני במינוס או עם הלוואות. זה מתאים לי?</summary><p>כן. יש במדריך ובקובץ שלב שלם על יציאה מהמינוס, ובאפליקציה מעקב אחרי הלוואות. אם המצב קשה, כדאי לשלב גם ליווי של איש מקצוע.</p></details>
+    <details><summary>אני במינוס או עם הלוואות. זה מתאים לי?</summary><p>כן. יש במדריך ובקובץ שלב שלם על יציאה מהמינוס, ובאפליקציה מזינים כל הלוואה לפי הפרטים מהבנק (סכום, ריבית, מסלול ותאריכים), וההחזר והיתרה מחושבים לבד. אם המצב קשה, כדאי לשלב גם ליווי של איש מקצוע.</p></details>
+  </section>
+
+  <section class="contact" aria-labelledby="contactT">
+    <h2 id="contactT">יצירת קשר</h2>
+    <div class="ct-card">
+      <p>שאלה, הערה או רעיון לשיפור? אשמח לשמוע.</p>
+      <b class="ct-name">בנימין אמבאו</b>
+      <div class="ct-acts">
+        <a class="btn ct-wa" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%9C%D7%92%D7%91%D7%99%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.1-.1Z"/></svg><span>וואטסאפ <bdi dir="ltr">054-7271955</bdi></span></a>
+        <a class="btn ct-mail" href="mailto:benny.ambaw1955@gmail.com?subject=%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><bdi dir="ltr">benny.ambaw1955@gmail.com</bdi></a>
+      </div>
+    </div>
   </section>
 
   <footer>
