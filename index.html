@@ -4,10 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ניהול פיננסי · מתחילים</title>
-<meta name="description" content="חמישה שלבים לניהול כסף עצמאי: מדריך, קובץ אקסל ואפליקציה. בחינם, בלי הרשמה, והנתונים נשארים אצלכם.">
-<meta property="og:title" content="ניהול פיננסי · מתחילים לנהל את הכסף">
-<meta property="og:description" content="חמישה שלבים, מהבנת ההכנסות וההוצאות ועד אפליקציה לניהול התקציב. בחינם ובלי הרשמה.">
+<title>ניהול פיננסי · כלים חינמיים וליווי כלכלי עם בנימין אמבאו</title>
+<meta name="description" content="כלים חינמיים לניהול תקציב עצמאי וליווי כלכלי למשפחות, לבני זוג וליחידים עם בנימין אמבאו, בוגר ייעוץ כלכלי בשילוב NLP בחממה ליועץ.">
+<meta property="og:title" content="ניהול פיננסי · כלים חינמיים וליווי כלכלי אישי">
+<meta property="og:description" content="מתחילים עם מדריך, אקסל ואפליקציה בחינם ובלי הרשמה. רוצים עזרה אישית? הכירו את בנימין אמבאו, יועץ לליווי כלכלי.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nihul-taktziv.github.io/">
 <meta property="og:locale" content="he_IL">
@@ -187,6 +187,51 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
 html:not(.on-steps) .hero, html:not(.on-steps) main{display:none}
 html.on-steps .welcome{display:none}
 .to-welcome{display:inline-block;margin-top:14px;color:#fff;opacity:.85;font-size:15px}
+
+/* Personal guidance, alongside the free tools */
+html{scroll-padding-top:20px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--seal);outline-offset:4px}
+.welcome a:focus-visible{outline-color:#FCE8AC}
+.w-byline{margin:14px 0 0;font-size:16px;line-height:1.6}
+.w-byline strong{font-weight:700}
+.w-byline span{display:block;font-size:14px;opacity:.9}
+.welcome .w-cta{position:static;margin-top:24px}
+.w-secondary{display:flex;justify-content:center;align-items:center;text-align:center;min-height:50px;margin-top:10px;padding:10px 16px;border:1.5px solid rgba(255,255,255,.65);border-radius:14px;text-decoration:none;font-weight:700;font-size:17px}
+.w-about{text-align:center;margin:12px 0 0;font-size:15px;text-underline-offset:4px}
+.intro .pace{margin-top:10px}
+.direct-app{display:inline-block;margin-top:12px;color:var(--seal);text-underline-offset:4px;font-weight:700}
+.advisor,.guidance{margin-top:32px;scroll-margin-top:20px}
+.advisor h2,.guidance h2{font-size:25px;margin-bottom:14px}
+.advisor-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:24px;display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px;align-items:start}
+.advisor-photo{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 38%;border-radius:16px}
+.advisor-copy p{margin:0 0 12px;color:var(--ink-2)}
+.advisor-copy .qualification{color:var(--ink);font-weight:600}
+.advisor-copy a{color:var(--seal);font-weight:700;text-underline-offset:4px}
+.section-label{display:block;color:var(--seal);font-weight:700;font-size:14px;margin-bottom:6px}
+.guidance>p{color:var(--ink-2);margin:0 0 16px}
+.guidance-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0;list-style:none;margin:0 0 16px}
+.guidance-grid li{background:var(--surface);box-shadow:var(--shadow);border-radius:16px;padding:18px}
+.guidance-grid h3{font-size:18px;margin-bottom:10px}
+.guidance-grid p{font-size:16px;color:var(--ink-2);margin:0}
+.meetings{background:var(--seal-soft);border-radius:16px;padding:18px}
+.meetings h3{font-size:18px;margin-bottom:8px}
+.meetings p{margin:0 0 10px}
+.meetings p:last-child{margin-bottom:0}
+.guidance .acts{margin-top:16px}
+.guidance .scope{font-size:14px;color:var(--ink-2);margin-top:12px}
+.contact{scroll-margin-top:20px}
+.ct-acts{flex-wrap:wrap}
+.ct-acts .btn{gap:8px;padding:10px 14px;flex:1 1 180px;font-size:17px}
+.ct-wa{background:#16783D}
+.ct-details{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:16px;font-size:16px}
+.ct-details a{overflow-wrap:anywhere;text-underline-offset:4px;max-width:100%}
+@media(max-width:600px){
+ .advisor-card{grid-template-columns:1fr;padding:20px;gap:18px}
+ .advisor-photo{width:min(100%,240px);justify-self:center}
+ .guidance-grid{grid-template-columns:1fr}
+ .guidance-grid li{padding:18px 20px}
+ .advisor h2,.guidance h2{font-size:23px}
+}
 </style>
 <script>if(location.hash && location.hash !== "#welcome") document.documentElement.classList.add("on-steps");</script>
 </head>
@@ -196,6 +241,7 @@ html.on-steps .welcome{display:none}
     <div class="w-brand"><div class="logo" aria-hidden="true"><svg viewBox="212 212 600 600" aria-hidden="true"><defs><linearGradient id="wlg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBE6A6"/><stop offset="1" stop-color="#D9A93F"/></linearGradient><linearGradient id="wlgh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#E0B24A"/><stop offset="1" stop-color="#FCE8AC"/></linearGradient></defs><path d="M 690 300 A 282 282 0 1 0 794 512" fill="none" stroke="url(#wlgh)" stroke-width="30" stroke-linecap="round"/><rect x="352" y="520" width="78" height="170" rx="14" fill="url(#wlg)"/><rect x="456" y="440" width="78" height="250" rx="14" fill="url(#wlg)"/><rect x="560" y="350" width="78" height="340" rx="14" fill="url(#wlg)"/><path d="M 300 470 C 420 440 560 380 690 262" fill="none" stroke="url(#wlgh)" stroke-width="30" stroke-linecap="round"/><path d="M 610 250 L 724 230 L 700 344 Z" fill="#FCE8AC" stroke="#FCE8AC" stroke-width="14" stroke-linejoin="round"/><circle cx="676" cy="652" r="104" fill="url(#wlg)" stroke="#5A63CF" stroke-width="12"/><g fill="none" stroke="#3A44A8" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"><path d="M 628 702 L 628 604 L 676 604 Q 700 604 700 628 L 700 668"/><path d="M 724 602 L 724 700 L 676 700 Q 652 700 652 676 L 652 636"/></g></svg></div>ניהול פיננסי</div>
     <h1>הכסף שלכם,<br><em>סוף סוף בשליטה</em></h1>
     <p class="w-lead">מבינים לאן הולך הכסף, בונים תקציב שמחזיק, וחוסכים למטרות. הכול מהטלפון, בחינם ובלי הרשמה.</p>
+    <p class="w-byline">מאת <strong>בנימין אמבאו</strong> | יועץ לליווי כלכלי<span>למשפחות, לבני זוג ולכל אדם שרוצה להתנהל נכון עם הכסף</span></p>
     <div class="w-vis" aria-hidden="true">
       <div class="w-ph back"><img src="img/saving.webp" alt="" width="390" height="844"></div>
       <div class="w-ph front"><img src="img/home.webp" alt="" width="390" height="844"></div>
@@ -207,8 +253,10 @@ html.on-steps .welcome{display:none}
       <li><span class="ic">🗓️</span><div><b>תקציב שמחזיק</b><span>הוצאות קבועות, הלוואות ומשתנות במקום אחד, עם יום חיוב לכל תשלום.</span></div></li>
       <li><span class="ic">🎯</span><div><b>חוסכים למטרות</b><span>מזינים יעד ותאריך, והאפליקציה מחשבת כמה לשים בצד כל חודש.</span></div></li>
     </ul>
-    <a class="w-cta" href="#steps" id="wGo"><span id="wGoT">מתחילים · 5 שלבים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
-    <p class="w-note">מדריך, קובץ אקסל ואפליקציה · הנתונים נשארים אצלכם</p>
+    <a class="w-cta" href="#steps" id="wGo"><span id="wGoT">מתחילים עם הכלים החינמיים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <a class="w-secondary" href="#guidance">רוצים ליווי אישי? בואו נדבר</a>
+    <p class="w-note">הכלים בחינם וללא הרשמה · הליווי האישי הוא שירות נפרד</p>
+    <p class="w-about"><a href="#about">נעים להכיר — מי עומד מאחורי הכלים?</a></p>
     <p class="w-copy">© 2026 בנימין אמבאו · כל הזכויות שמורות</p>
   </div>
 </section>
@@ -244,7 +292,9 @@ html.on-steps .welcome{display:none}
 
   <section class="intro">
     <h2>איך זה עובד</h2>
-    <p>עוברים על השלבים לפי הסדר. בסוף כל שלב לוחצים "סיימתי", והדף יזכור איפה עצרתם, גם אם תחזרו אחרי כמה ימים.</p>
+    <p>מומלץ להתקדם לפי הסדר, אבל לא צריך להספיק הכול היום. מתחילים בצעד אחד, בקצב שמתאים לכם.</p>
+    <p class="pace">בסוף כל שלב לוחצים ״סיימתי״. ההתקדמות נשמרת בדפדפן הזה, ואפשר להמשיך ממנו גם בעוד כמה ימים.</p>
+    <a class="direct-app" href="https://nihul-taktziv.github.io/maatafot/" target="_blank" rel="noopener">כבר יש לכם תקציב? אפשר לפתוח ישירות את האפליקציה ←</a>
   </section>
 
   <ol class="steps">
@@ -318,24 +368,59 @@ html.on-steps .welcome{display:none}
     <p>מעכשיו העבודה היומיומית נעשית באפליקציה. כל שלושה חודשים, או כשמשהו גדול משתנה, חוזרים לקובץ האקסל ובודקים שהתוכנית עדיין מחזיקה.</p>
   </div>
 
-  <section class="faq">
-    <h2>שאלות נפוצות</h2>
-    <details><summary>זה עולה כסף?</summary><p>לא. המדריכים, קובץ האקסל והאפליקציה זמינים בחינם.</p></details>
-    <details><summary>מישהו רואה את הנתונים שלי?</summary><p>לא. אין הרשמה ואין שרת. קובץ האקסל נשאר במחשב שלכם, והנתונים באפליקציה נשמרים רק בטלפון. לכן חשוב לשמור גיבוי פעם בחודש: בהגדרות ← שמירת גיבוי.</p></details>
-    <details><summary>חייבים לעבור את כל השלבים?</summary><p>מומלץ מאוד. אפשר להתחיל ישר מהאפליקציה, אבל תקציב שנבנה עם נתונים אמיתיים של שלושה חודשים מחזיק הרבה יותר טוב מתקציב שנבנה "בערך".</p></details>
-    <details><summary>אין לי מחשב</summary><p>אפשר לעשות הכול מהטלפון. המדריכים נפתחים בטלפון, ואת קובץ האקסל ממלאים באפליקציית Excel החינמית. זה פחות נוח, אבל עובד.</p></details>
-    <details><summary>אני במינוס או עם הלוואות. זה מתאים לי?</summary><p>כן. יש במדריך ובקובץ שלב שלם על יציאה מהמינוס, ובאפליקציה מזינים כל הלוואה לפי הפרטים מהבנק (סכום, ריבית, מסלול ותאריכים), וההחזר והיתרה מחושבים לבד. אם המצב קשה, כדאי לשלב גם ליווי של איש מקצוע.</p></details>
+  <section class="advisor" id="about" aria-labelledby="aboutT">
+    <span class="section-label">האדם שמאחורי הכלים</span>
+    <h2 id="aboutT">נעים להכיר, אני בנימין אמבאו</h2>
+    <div class="advisor-card">
+      <img class="advisor-photo" src="img/binyamin-ambaw.jpg" width="960" height="1280" alt="בנימין אמבאו, יועץ לליווי כלכלי" loading="lazy" decoding="async">
+      <div class="advisor-copy">
+        <p class="qualification">אני יועץ לליווי כלכלי, בוגר ההכשרה ״ייעוץ כלכלי בשילוב NLP״ במוסד ״חממה ליועץ״ ובעל תעודה בתחום.</p>
+        <p>אני מסייע למשפחות, לבני זוג וליחידים לעשות סדר בהכנסות ובהוצאות, לבנות תקציב מציאותי ולפתח הרגלים כלכליים שמתאימים לחיים שלהם.</p>
+        <p>מתוך הרצון להנגיש את הידע, פיתחתי את מערכת ״ניהול פיננסי״: מדריכים, קובץ אקסל ואפליקציה לשימוש עצמאי, ללא תשלום.</p>
+        <p>אני מאמין שהתנהלות כלכלית נכונה מתחילה בהבנה, ממשיכה בתכנון ונבנית באמצעות התמדה.</p>
+        <a href="#guidance">רוצים עזרה אישית מעבר לכלים? ←</a>
+      </div>
+    </div>
   </section>
 
-  <section class="contact" aria-labelledby="contactT">
-    <h2 id="contactT">יצירת קשר</h2>
+  <section class="guidance" id="guidance" aria-labelledby="guidanceT">
+    <span class="section-label">אפשר גם ביחד</span>
+    <h2 id="guidanceT">ליווי כלכלי שמתאים לחיים שלכם</h2>
+    <p>הכלים פתוחים לשימוש עצמאי. מי שרוצים עזרה אישית יכולים לבחור בליווי — לבד, כזוג או כמשפחה.</p>
+    <ol class="guidance-grid">
+      <li><h3>1. מבינים את המצב</h3><p>ממפים יחד הכנסות, הוצאות והתחייבויות, ומגדירים מה חשוב לכם לשנות.</p></li>
+      <li><h3>2. בונים תוכנית</h3><p>מתכננים תקציב מציאותי ונותנים מקום להתחייבויות, לחיסכון ולמטרות שלכם.</p></li>
+      <li><h3>3. מפתחים הרגלים</h3><p>עובדים על שגרת מעקב ומתאימים את ההתנהלות לתוכנית, במסגרת הליווי שסוכמה.</p></li>
+    </ol>
+    <div class="meetings">
+      <h3>איך נפגשים?</h3>
+      <p>הפגישה הראשונה מתקיימת פנים אל פנים. לאחריה אפשר להמשיך בזום או פנים אל פנים — לבחירתכם.</p>
+      <p>בפנייה הראשונה נכיר את הצרכים שלכם ונברר התאמה, היקף ועלות. אין צורך לשלוח מסמכים פיננסיים בהודעה הראשונה.</p>
+    </div>
+    <div class="acts"><a class="btn btn-p" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%9C%20%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%20%D7%90%D7%99%D7%A9%D7%99%20%D7%90%D7%95%20%D7%9E%D7%A9%D7%A4%D7%97%D7%AA%D7%99." target="_blank" rel="noopener">לבירור ליווי אישי בוואטסאפ</a><a class="btn btn-g" href="tel:+972547271955">התקשרו: <bdi>054-7271955</bdi></a></div>
+    <p class="scope">הליווי האישי הוא שירות נפרד מהכלים החינמיים. אין חובה לפנות או להשאיר פרטים כדי להשתמש בהם.</p>
+  </section>
+
+  <section class="faq">
+    <h2>שאלות נפוצות</h2>
+    <details><summary>זה עולה כסף?</summary><p>המדריכים, קובץ האקסל והאפליקציה זמינים בחינם ובלי הרשמה. ליווי כלכלי אישי הוא שירות נפרד בתשלום; היקף ועלות מבררים ישירות עם בנימין.</p></details>
+    <details><summary>מישהו רואה את הנתונים שלי?</summary><p>לא. אין הרשמה ואין שרת. קובץ האקסל נשאר במחשב שלכם, והנתונים באפליקציה נשמרים רק בטלפון. לכן חשוב לשמור גיבוי פעם בחודש: בהגדרות ← שמירת גיבוי.</p></details>
+    <details><summary>חייבים לעבור את כל השלבים?</summary><p>מומלץ להתקדם לפי הסדר כדי לבנות תקציב על בסיס הנתונים שלכם, אבל אפשר לחלק את העבודה למפגשים קצרים. אם כבר יש לכם תקציב, אפשר גם לפתוח ישירות את האפליקציה.</p></details>
+    <details><summary>אין לי מחשב</summary><p>אפשר לעשות הכול מהטלפון. המדריכים נפתחים בטלפון, ואת קובץ האקסל ממלאים באפליקציית Excel החינמית. זה פחות נוח, אבל עובד.</p></details>
+    <details><summary>אני במינוס או עם הלוואות. זה מתאים לי?</summary><p>כן. יש במדריך ובקובץ שלב שלם על יציאה מהמינוס, ובאפליקציה מזינים כל הלוואה לפי הפרטים מהבנק (סכום, ריבית, מסלול ותאריכים), וההחזר והיתרה מחושבים לבד. אם המצב קשה, כדאי לשלב גם ליווי של איש מקצוע.</p></details>
+    <details><summary>איך מתקיים הליווי האישי?</summary><p>הפגישה הראשונה פנים אל פנים. בהמשך אפשר לבחור בין פגישות בזום לבין פגישות פנים אל פנים. היקף הליווי נקבע לאחר היכרות ובירור הצרכים.</p></details>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contactT">
+    <h2 id="contactT">בואו נדבר</h2>
     <div class="ct-card">
-      <p>שאלה, הערה או רעיון לשיפור? אשמח לשמוע.</p>
-      <b class="ct-name">בנימין אמבאו</b>
+      <p>רוצים לבדוק אפשרות לליווי כלכלי, או לשאול על הכלים? אשמח לשמוע מכם.</p>
+      <b class="ct-name">בנימין אמבאו · יועץ לליווי כלכלי</b>
       <div class="ct-acts">
-        <a class="btn ct-wa" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%9C%D7%92%D7%91%D7%99%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ לבנימין" title="וואטסאפ"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.1-.1Z"/></svg></a>
-        <a class="btn ct-mail" href="mailto:benny.ambaw1955@gmail.com?subject=%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" aria-label="שליחת מייל לבנימין" title="מייל"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a class="btn ct-wa" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%9C%D7%92%D7%91%D7%99%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ לבנימין" title="וואטסאפ"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.1-.1Z"/></svg><span>שליחת הודעה בוואטסאפ</span></a>
+        <a class="btn ct-mail" href="mailto:benny.ambaw1955@gmail.com?subject=%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" aria-label="שליחת מייל לבנימין" title="מייל"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>שליחת מייל</span></a>
       </div>
+      <div class="ct-details"><a href="tel:+972547271955"><bdi>054-7271955</bdi></a><a href="mailto:benny.ambaw1955@gmail.com"><bdi>benny.ambaw1955@gmail.com</bdi></a></div>
     </div>
   </section>
 
@@ -390,9 +475,13 @@ html.on-steps .welcome{display:none}
     var steps = !!location.hash && location.hash !== "#welcome";
     document.documentElement.classList.toggle("on-steps", steps);
     if(location.hash === "#steps") window.scrollTo(0, 0);
+    else if(steps){
+      var target = document.getElementById(location.hash.slice(1));
+      if(target) target.scrollIntoView({block:"start"});
+    }
   }
   var cur0 = current(), cnt0 = 0; for(var k = 1; k <= N; k++) if(done[k]) cnt0++;
-  document.getElementById("wGoT").textContent = !cur0 ? "לשלבים · כולם הושלמו" : cnt0 ? "ממשיכים משלב " + cur0 : "מתחילים · 5 שלבים";
+  document.getElementById("wGoT").textContent = !cur0 ? "לשלבים · כולם הושלמו" : cnt0 ? "ממשיכים משלב " + cur0 : "מתחילים עם הכלים החינמיים";
   window.addEventListener("hashchange", view);
   view();
 })();
