@@ -202,8 +202,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .direct-app{display:inline-block;margin-top:12px;color:var(--seal);text-underline-offset:4px;font-weight:700}
 .advisor,.guidance{margin-top:32px;scroll-margin-top:20px}
 .advisor h2,.guidance h2{font-size:25px;margin-bottom:14px}
-.advisor-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:24px;display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px;align-items:start}
-.advisor-photo{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 38%;border-radius:16px}
+.advisor-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:24px;display:block}
 .advisor-copy p{margin:0 0 12px;color:var(--ink-2)}
 .advisor-copy .qualification{color:var(--ink);font-weight:600}
 .advisor-copy a{color:var(--seal);font-weight:700;text-underline-offset:4px}
@@ -223,11 +222,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .ct-acts{flex-wrap:wrap}
 .ct-acts .btn{gap:8px;padding:10px 14px;flex:1 1 180px;font-size:17px}
 .ct-wa{background:#16783D}
-.ct-details{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:16px;font-size:16px}
-.ct-details a{overflow-wrap:anywhere;text-underline-offset:4px;max-width:100%}
 @media(max-width:600px){
- .advisor-card{grid-template-columns:1fr;padding:20px;gap:18px}
- .advisor-photo{width:min(100%,240px);justify-self:center}
+ .advisor-card{padding:20px}
  .guidance-grid{grid-template-columns:1fr}
  .guidance-grid li{padding:18px 20px}
  .advisor h2,.guidance h2{font-size:23px}
@@ -372,7 +368,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <span class="section-label">האדם שמאחורי הכלים</span>
     <h2 id="aboutT">נעים להכיר, אני בנימין אמבאו</h2>
     <div class="advisor-card">
-      <img class="advisor-photo" src="img/binyamin-ambaw.jpg" width="960" height="1280" alt="בנימין אמבאו, יועץ לליווי כלכלי" loading="lazy" decoding="async">
       <div class="advisor-copy">
         <p class="qualification">אני יועץ לליווי כלכלי, בוגר ההכשרה ״ייעוץ כלכלי בשילוב NLP״ במוסד ״חממה ליועץ״ ובעל תעודה בתחום.</p>
         <p>אני מסייע למשפחות, לבני זוג וליחידים לעשות סדר בהכנסות ובהוצאות, לבנות תקציב מציאותי ולפתח הרגלים כלכליים שמתאימים לחיים שלהם.</p>
@@ -397,7 +392,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <p>הפגישה הראשונה מתקיימת פנים אל פנים. לאחריה אפשר להמשיך בזום או פנים אל פנים — לבחירתכם.</p>
       <p>בפנייה הראשונה נכיר את הצרכים שלכם ונברר התאמה, היקף ועלות. אין צורך לשלוח מסמכים פיננסיים בהודעה הראשונה.</p>
     </div>
-    <div class="acts"><a class="btn btn-p" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%9C%20%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%20%D7%90%D7%99%D7%A9%D7%99%20%D7%90%D7%95%20%D7%9E%D7%A9%D7%A4%D7%97%D7%AA%D7%99." target="_blank" rel="noopener">לבירור ליווי אישי בוואטסאפ</a><a class="btn btn-g" href="tel:+972547271955">התקשרו: <bdi>054-7271955</bdi></a></div>
+    <div class="acts"><a class="btn btn-p" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%9C%20%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%20%D7%90%D7%99%D7%A9%D7%99%20%D7%90%D7%95%20%D7%9E%D7%A9%D7%A4%D7%97%D7%AA%D7%99." target="_blank" rel="noopener">לבירור ליווי אישי בוואטסאפ</a></div>
     <p class="scope">הליווי האישי הוא שירות נפרד מהכלים החינמיים. אין חובה לפנות או להשאיר פרטים כדי להשתמש בהם.</p>
   </section>
 
@@ -420,7 +415,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
         <a class="btn ct-wa" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%9C%D7%92%D7%91%D7%99%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ לבנימין" title="וואטסאפ"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3 1 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.1-.1Z"/></svg><span>שליחת הודעה בוואטסאפ</span></a>
         <a class="btn ct-mail" href="mailto:benny.ambaw1955@gmail.com?subject=%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99" aria-label="שליחת מייל לבנימין" title="מייל"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>שליחת מייל</span></a>
       </div>
-      <div class="ct-details"><a href="tel:+972547271955"><bdi>054-7271955</bdi></a><a href="mailto:benny.ambaw1955@gmail.com"><bdi>benny.ambaw1955@gmail.com</bdi></a></div>
     </div>
   </section>
 
