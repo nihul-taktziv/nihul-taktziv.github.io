@@ -4,10 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ניהול פיננסי · כלים חינמיים וליווי כלכלי עם בנימין אמבאו</title>
-<meta name="description" content="כלים חינמיים לניהול תקציב עצמאי וליווי כלכלי למשפחות, לבני זוג וליחידים עם בנימין אמבאו, בוגר ייעוץ כלכלי בשילוב NLP בחממה ליועץ.">
-<meta property="og:title" content="ניהול פיננסי · כלים חינמיים וליווי כלכלי אישי">
-<meta property="og:description" content="מתחילים עם מדריך, אקסל ואפליקציה בחינם ובלי הרשמה. רוצים עזרה אישית? הכירו את בנימין אמבאו, יועץ לליווי כלכלי.">
+<title>ניהול פיננסי · כלים לניהול תקציב וליווי כלכלי עם בנימין אמבאו</title>
+<meta name="description" content="מדריך, קובץ אקסל ואפליקציה לניהול תקציב עצמאי וליווי כלכלי למשפחות, לבני זוג וליחידים עם בנימין אמבאו, בוגר ייעוץ כלכלי בשילוב NLP בחממה ליועץ.">
+<meta property="og:title" content="ניהול פיננסי · כלים לניהול תקציב וליווי כלכלי אישי">
+<meta property="og:description" content="מדריך, אקסל ואפליקציה בתשלום אחד של 50 ₪. רוצים עזרה אישית? הכירו את בנימין אמבאו, יועץ לליווי כלכלי.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nihul-taktziv.github.io/">
 <meta property="og:locale" content="he_IL">
@@ -192,6 +192,42 @@ footer .reset{background:none;border:0;color:var(--ink-2);font:14px "Assistant",
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .w-badge{background:#1E2240;color:#ECEEF8} }
 html:not(.on-steps) .hero, html:not(.on-steps) main{display:none}
 html.on-steps .welcome{display:none}
+html:not(.on-join) .join{display:none}
+html.on-join .welcome,html.on-join .hero,html.on-join main{display:none}
+.join{padding:22px 0 40px}
+.j-back{display:inline-block;color:var(--seal);font-weight:700;text-underline-offset:4px}
+.j-trial{margin:14px 0 0;padding:10px 14px;border-radius:12px;background:var(--amber-soft);color:var(--amber);font-size:15px}
+.join h1{font-size:clamp(28px,7vw,38px);margin:18px 0 8px}
+.j-lead{margin:0 0 18px;color:var(--ink-2)}
+.j-card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);padding:18px;margin-top:14px}
+.j-card h2{font-size:20px;margin-bottom:10px}
+.j-list{margin:0;padding:0 20px 0 0}
+.j-list li{margin:4px 0}
+.j-small{font-size:15px;color:var(--ink-2);margin:10px 0 0}
+.j-small a,.j-card a,.j-agree a,.j-copy a{color:var(--seal);text-underline-offset:3px}
+.j-terms{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.j-terms div{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-top:1px solid var(--line)}
+.j-terms div:first-child{border-top:0}
+.j-terms dt{color:var(--ink-2)}
+.j-terms dd{margin:0;font-weight:700}
+.j-terms .tot{background:var(--seal-soft)}
+.j-terms .tot dt,.j-terms .tot dd{color:var(--ink);font-weight:800;font-size:19px}
+.j-seller p{margin:0;line-height:1.8}
+.j-todo{background:var(--amber-soft);color:var(--amber);border-radius:6px;padding:0 6px;font-weight:700}
+.j-pay{margin-top:18px}
+.j-agree{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-size:16px}
+.j-agree input{width:22px;height:22px;flex:none;margin:2px 0 0;accent-color:var(--seal-strong)}
+.j-err{color:#B42318;font-weight:700;font-size:15px;margin:8px 0 0;min-height:0}
+.j-err:empty{display:none}
+.j-go{width:100%;margin-top:12px;min-height:56px;font-size:18px}
+.j-ok{margin:14px 0 0;padding:14px;border-radius:14px;background:var(--ok-soft);color:var(--ok);font-weight:700}
+.j-ok code{font:800 18px ui-monospace,monospace;color:var(--ink);background:var(--surface);padding:2px 8px;border-radius:8px;direction:ltr;display:inline-block}
+.j-code{scroll-margin-top:20px}
+.j-lbl{display:block;font-weight:700;margin-top:12px}
+.j-in{width:100%;margin-top:6px;min-height:52px;border:1.5px solid var(--ink-2);border-radius:12px;padding:0 14px;font:700 19px ui-monospace,monospace;letter-spacing:1px;background:var(--surface);color:var(--ink);text-align:left}
+.j-in:focus-visible{outline:3px solid var(--seal);outline-offset:2px}
+.j-copy{text-align:center;color:var(--ink-2);font-size:13px;margin-top:28px}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .j-err{color:#FF9C8F} }
 .to-welcome{display:inline-block;margin-top:14px;color:#fff;opacity:.85;font-size:15px}
 
 /* Personal guidance, alongside the free tools */
@@ -235,14 +271,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
  .advisor h2,.guidance h2{font-size:23px}
 }
 </style>
-<script>if(location.hash && location.hash !== "#welcome") document.documentElement.classList.add("on-steps");</script>
+<script>(function(){var h=location.hash,a=false;try{a=!!localStorage.getItem("maatafot-access-v1")}catch(e){}
+if(h==="#join"||h==="#code"||(h&&h!=="#welcome"&&!a))document.documentElement.classList.add("on-join");else if(h&&h!=="#welcome")document.documentElement.classList.add("on-steps");})();</script>
 </head>
 <body>
 <section class="welcome" id="welcome" aria-label="ברוכים הבאים">
   <div class="wrap w-in">
     <div class="w-brand"><div class="logo" aria-hidden="true"><svg viewBox="212 212 600 600" aria-hidden="true"><defs><linearGradient id="wlg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBE6A6"/><stop offset="1" stop-color="#D9A93F"/></linearGradient><linearGradient id="wlgh" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#E0B24A"/><stop offset="1" stop-color="#FCE8AC"/></linearGradient></defs><path d="M 690 300 A 282 282 0 1 0 794 512" fill="none" stroke="url(#wlgh)" stroke-width="30" stroke-linecap="round"/><rect x="352" y="520" width="78" height="170" rx="14" fill="url(#wlg)"/><rect x="456" y="440" width="78" height="250" rx="14" fill="url(#wlg)"/><rect x="560" y="350" width="78" height="340" rx="14" fill="url(#wlg)"/><path d="M 300 470 C 420 440 560 380 690 262" fill="none" stroke="url(#wlgh)" stroke-width="30" stroke-linecap="round"/><path d="M 610 250 L 724 230 L 700 344 Z" fill="#FCE8AC" stroke="#FCE8AC" stroke-width="14" stroke-linejoin="round"/><circle cx="676" cy="652" r="104" fill="url(#wlg)" stroke="#5A63CF" stroke-width="12"/><g fill="none" stroke="#3A44A8" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"><path d="M 628 702 L 628 604 L 676 604 Q 700 604 700 628 L 700 668"/><path d="M 724 602 L 724 700 L 676 700 Q 652 700 652 676 L 652 636"/></g></svg></div>ניהול פיננסי</div>
     <h1>הכסף שלכם,<br><em>סוף סוף בשליטה</em></h1>
-    <p class="w-lead">מבינים לאן הולך הכסף, בונים תקציב שמחזיק, וחוסכים למטרות. הכול מהטלפון, בחינם ובלי הרשמה.</p>
+    <p class="w-lead">מבינים לאן הולך הכסף, בונים תקציב שמחזיק, וחוסכים למטרות. הכול מהטלפון, והנתונים נשארים אצלכם.</p>
     <p class="w-byline">מאת <strong>בנימין אמבאו</strong> | יועץ לליווי כלכלי<span>למשפחות, לבני זוג ולכל אדם שרוצה להתנהל נכון עם הכסף</span></p>
     <div class="w-vis" aria-hidden="true">
       <div class="w-ph back"><img src="img/saving.webp" alt="" width="390" height="844"></div>
@@ -255,11 +292,63 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <li><span class="ic">🗓️</span><div><b>תקציב שמחזיק</b><span>הוצאות קבועות, הלוואות ומשתנות במקום אחד, עם יום חיוב לכל תשלום.</span></div></li>
       <li><span class="ic">🎯</span><div><b>חוסכים למטרות</b><span>מזינים יעד ותאריך, והאפליקציה מחשבת כמה לשים בצד כל חודש.</span></div></li>
     </ul>
-    <a class="w-cta" href="#steps" id="wGo"><span id="wGoT">מתחילים עם הכלים החינמיים</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <a class="w-cta" href="#join" id="wGo"><span id="wGoT">הצטרפות · 50 ₪</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></a>
     <a class="w-secondary" href="#guidance">רוצים ליווי אישי? בואו נדבר</a>
-    <p class="w-note">הכלים בחינם וללא הרשמה · הליווי האישי הוא שירות נפרד</p>
+    <p class="w-note" id="wNote">תשלום אחד של 50 ₪ · בלי מנוי ובלי חיוב חוזר</p>
+    <p class="w-about" id="wHave"><a href="#code">כבר הצטרפתם? כניסה עם קוד גישה</a></p>
     <p class="w-about"><a href="#about">נעים להכיר — מי עומד מאחורי הכלים?</a></p>
     <p class="w-copy">© 2026 בנימין אמבאו · כל הזכויות שמורות<br><a href="privacy.html">פרטיות</a> · <a href="terms.html">תנאי שימוש</a> · <a href="accessibility.html">נגישות</a></p>
+  </div>
+</section>
+<section class="join" id="join" aria-labelledby="joinT">
+  <div class="wrap">
+    <a class="j-back" href="#">→ למסך הפתיחה</a>
+    <p class="j-trial" role="note"><b>מצב ניסיון.</b> אין עדיין חיוב אמיתי. הכפתור מדמה תשלום ונותן קוד לדוגמה.</p>
+    <h1 id="joinT">הצטרפות לניהול פיננסי</h1>
+    <p class="j-lead">חמישה שלבים מסודרים, מהמדריך ועד אפליקציה שמנהלת איתכם את התקציב כל יום.</p>
+    <div class="j-card">
+      <h2>מה מקבלים</h2>
+      <ul class="j-list">
+        <li>מדריך לבניית תקציב משפחתי (PDF)</li>
+        <li>קובץ אקסל לתכנון התקציב, ומדריך שמסביר כל גיליון</li>
+        <li>מדריך התקנה של האפליקציה</li>
+        <li>האפליקציה, בטלפון ובמחשב, עם כל העדכונים</li>
+        <li>מעקב אחרי ההתקדמות בחמשת השלבים</li>
+      </ul>
+      <p class="j-small">הליווי האישי אינו כלול. הוא שירות נפרד.</p>
+    </div>
+    <div class="j-card j-price" aria-labelledby="priceT">
+      <h2 id="priceT">המחיר</h2>
+      <dl class="j-terms">
+        <div><dt>מספר תשלומים</dt><dd>1</dd></div>
+        <div><dt>סכום כל תשלום</dt><dd>50 ₪</dd></div>
+        <div class="tot"><dt>סה״כ לתשלום</dt><dd>50 ₪</dd></div>
+      </dl>
+      <p class="j-small">זה המחיר הסופי. אין מנוי, אין חיוב חוזר ואין עמלות נוספות.</p>
+      <p class="j-small"><b>משך הגישה:</b> כל עוד השירות פעיל, ולפחות 12 חודשים מיום התשלום. קבצים שהורדתם נשארים אצלכם.</p>
+      <p class="j-small"><b>ביטול:</b> אפשר לבטל תוך 14 יום מיום התשלום ולקבל החזר מלא. קוד הגישה מבוטל. פרטים ב<a href="terms.html#refund">תנאי השימוש</a>.</p>
+    </div>
+    <div class="j-card j-seller">
+      <h2>פרטי המוכר</h2>
+      <p>בנימין אמבאו · עוסק פטור מס׳ <span class="j-todo">יושלם לפני ההשקה</span><br>כתובת: <span class="j-todo">יושלם לפני ההשקה</span><br>טלפון: <a href="tel:+972547271955" dir="ltr">054-727-1955</a> · מייל: <a href="mailto:benny.ambaw1955@gmail.com" dir="ltr">benny.ambaw1955@gmail.com</a></p>
+    </div>
+    <div class="j-pay">
+      <label class="j-agree"><input type="checkbox" id="jAgree" aria-describedby="jErr"><span>קראתי ואישרתי את <a href="terms.html">תנאי השימוש</a>, כולל תנאי הביטול, ואת <a href="privacy.html">מדיניות הפרטיות</a>.</span></label>
+      <p class="j-err" id="jErr" role="alert"></p>
+      <button class="btn btn-p j-go" id="jPay" type="button">מעבר לתשלום מאובטח · 50 ₪</button>
+      <p class="j-small">התשלום נעשה בעמוד של חברת הסליקה. אנחנו לא רואים ולא שומרים את פרטי הכרטיס. קוד הגישה נשלח למייל שתזינו שם, יחד עם קבלה.</p>
+      <p class="j-ok" id="jOk" role="status" hidden></p>
+    </div>
+    <div class="j-card j-code" id="code" aria-labelledby="codeT">
+      <h2 id="codeT">כבר הצטרפתם? כניסה עם קוד גישה</h2>
+      <p class="j-small">את הקוד שלחנו במייל אחרי התשלום. אותו קוד פותח גם את האפליקציה.</p>
+      <label for="jCode" class="j-lbl">קוד גישה</label>
+      <input id="jCode" class="j-in" dir="ltr" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" placeholder="NT-XXXX-XXXX" aria-describedby="jCodeErr">
+      <p class="j-err" id="jCodeErr" role="alert"></p>
+      <button class="btn btn-p j-go" id="jEnter" type="button">כניסה לשלבים</button>
+      <p class="j-small">איבדתם את הקוד? <a href="#contact" id="jHelp">כתבו לנו</a> ונשלח אותו שוב.</p>
+    </div>
+    <p class="j-copy">© 2026 בנימין אמבאו · כל הזכויות שמורות<br><a href="privacy.html">פרטיות</a> · <a href="terms.html">תנאי שימוש</a> · <a href="accessibility.html">נגישות</a></p>
   </div>
 </section>
 <header class="hero">
@@ -268,7 +357,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <div class="kick">ניהול פיננסי</div>
     <h1>מתחילים לנהל את הכסף</h1>
     <p>חמישה שלבים, לפי הסדר: מבינים כמה נכנס ולאן זה הולך, בונים תקציב שמחזיק, ומנהלים אותו באפליקציה בכל יום.</p>
-    <ul class="chips"><li>5 שלבים</li><li>בחינם</li><li>בלי הרשמה</li><li>הנתונים נשארים אצלכם</li></ul>
+    <ul class="chips"><li>5 שלבים</li><li>תשלום אחד</li><li>הנתונים נשארים אצלכם</li></ul>
     <a class="to-welcome" href="#">→ למסך הפתיחה</a>
   </div>
 </header>
@@ -399,13 +488,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <p>בפנייה הראשונה נכיר את הצרכים שלכם ונברר התאמה, היקף ועלות. אין צורך לשלוח מסמכים פיננסיים בהודעה הראשונה.</p>
     </div>
     <div class="acts"><a class="btn btn-p" href="https://wa.me/972547271955?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%91%D7%A0%D7%99%D7%9E%D7%99%D7%9F%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%A2%D7%9C%20%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%20%D7%90%D7%99%D7%A9%D7%99%20%D7%90%D7%95%20%D7%9E%D7%A9%D7%A4%D7%97%D7%AA%D7%99." target="_blank" rel="noopener">לבירור ליווי אישי בוואטסאפ</a></div>
-    <p class="scope">הליווי האישי הוא שירות נפרד מהכלים החינמיים. אין חובה לפנות או להשאיר פרטים כדי להשתמש בהם.</p>
+    <p class="scope">הליווי האישי הוא שירות נפרד מהכלים, ומחירו נקבע בנפרד. אין חובה לקחת ליווי כדי להשתמש בכלים.</p>
   </section>
 
   <section class="faq">
     <h2>שאלות נפוצות</h2>
-    <details><summary>זה עולה כסף?</summary><p>המדריכים, קובץ האקסל והאפליקציה זמינים בחינם ובלי הרשמה. ליווי כלכלי אישי הוא שירות נפרד בתשלום; היקף ועלות מבררים ישירות עם בנימין.</p></details>
-    <details><summary>מישהו רואה את הנתונים שלי?</summary><p>לא. אין הרשמה, ונתוני התקציב לא נשלחים לשום שרת: קובץ האקסל נשאר במחשב שלכם, והנתונים באפליקציה נשמרים רק בטלפון. לכן חשוב לשמור גיבוי פעם בחודש: בהגדרות ← שמירת גיבוי. הפרטים המלאים ב<a href="privacy.html">מדיניות הפרטיות</a>.</p></details>
+    <details><summary>זה עולה כסף?</summary><p>כן. הגישה למדריכים, לקובץ האקסל ולאפליקציה עולה 50 ₪, בתשלום אחד. אין מנוי ואין חיוב חוזר. ליווי כלכלי אישי הוא שירות נפרד בתשלום; היקף ועלות מבררים ישירות עם בנימין.</p></details>
+    <details><summary>מישהו רואה את הנתונים שלי?</summary><p>לא. בהצטרפות, חברת הסליקה מקבלת את השם, המייל ופרטי התשלום, כדי לחייב ולשלוח קוד גישה. נתוני התקציב עצמם לא נשלחים לשום שרת: קובץ האקסל נשאר במחשב שלכם, והנתונים באפליקציה נשמרים רק בטלפון. לכן חשוב לשמור גיבוי פעם בחודש: בהגדרות ← שמירת גיבוי. הפרטים המלאים ב<a href="privacy.html">מדיניות הפרטיות</a>.</p></details>
     <details><summary>חייבים לעבור את כל השלבים?</summary><p>מומלץ להתקדם לפי הסדר כדי לבנות תקציב על בסיס הנתונים שלכם, אבל אפשר לחלק את העבודה למפגשים קצרים. אם כבר יש לכם תקציב, אפשר גם לפתוח ישירות את האפליקציה.</p></details>
     <details><summary>אין לי מחשב</summary><p>אפשר לעשות הכול מהטלפון. המדריכים נפתחים בטלפון, ואת קובץ האקסל ממלאים באפליקציית Excel החינמית. זה פחות נוח, אבל עובד.</p></details>
     <details><summary>אני במינוס או עם הלוואות. זה מתאים לי?</summary><p>כן. יש במדריך ובקובץ שלב שלם על יציאה מהמינוס, ובאפליקציה מזינים כל הלוואה לפי הפרטים מהבנק (סכום, ריבית, מסלול ותאריכים), וההחזר והיתרה מחושבים לבד. אם המצב קשה, כדאי לשלב גם ליווי של איש מקצוע.</p></details>
@@ -473,17 +562,56 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   document.getElementById("reset").onclick = function(){ done = {}; save(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); };
   render();
   /* welcome screen ↔ steps: #steps (or any step anchor) shows the steps, an empty hash shows the welcome */
+  /* paid access. TRIAL: no real payment; one sample code. On launch, checkCode asks the server. */
+  var AKEY = "maatafot-access-v1", TRIAL = true, SAMPLE = "NT-DEMO-2026";
+  function hasAccess(){ try{ return !!localStorage.getItem(AKEY); }catch(e){ return false; } }
+  function norm(c){ return String(c || "").toUpperCase().replace(/[^A-Z0-9]/g, ""); }
+  function checkCode(c){ return Promise.resolve(TRIAL && norm(c) === norm(SAMPLE)); }
+  var jAgree = document.getElementById("jAgree"), jErr = document.getElementById("jErr"), jOk = document.getElementById("jOk");
+  var jCode = document.getElementById("jCode"), jCodeErr = document.getElementById("jCodeErr");
+  jAgree.onchange = function(){ if(jAgree.checked) jErr.textContent = ""; };
+  document.getElementById("jPay").onclick = function(){
+    if(!jAgree.checked){ jErr.textContent = "כדי להמשיך, צריך לאשר את תנאי השימוש ואת מדיניות הפרטיות."; jAgree.focus(); return; }
+    jErr.textContent = "";
+    if(TRIAL){
+      jOk.hidden = false;
+      jOk.innerHTML = "מצב ניסיון: התשלום כביכול התקבל. קוד הגישה לדוגמה: <code>" + SAMPLE + "</code>. במציאות הוא יגיע במייל.";
+      jCode.value = SAMPLE;
+    }
+  };
+  jCode.oninput = function(){ jCodeErr.textContent = ""; jCode.removeAttribute("aria-invalid"); };
+  function enter(){
+    var c = jCode.value.trim();
+    if(!c){ jCodeErr.textContent = "הזינו את קוד הגישה מהמייל."; jCode.setAttribute("aria-invalid", "true"); jCode.focus(); return; }
+    checkCode(c).then(function(ok){
+      if(!ok){ jCodeErr.textContent = "הקוד לא נמצא. בדקו שהעתקתם אותו בדיוק כמו במייל."; jCode.setAttribute("aria-invalid", "true"); jCode.focus(); return; }
+      try{ localStorage.setItem(AKEY, JSON.stringify({ code: norm(c), at: Date.now() })); }catch(e){}
+      location.hash = "#steps";
+    });
+  }
+  document.getElementById("jEnter").onclick = enter;
+  jCode.onkeydown = function(e){ if(e.key === "Enter") enter(); };
+  document.getElementById("jHelp").onclick = function(e){ e.preventDefault(); if(hasAccess()) location.hash = "#contact"; else window.open("https://wa.me/972547271955", "_blank", "noopener"); };
   function view(){
-    var steps = !!location.hash && location.hash !== "#welcome";
+    var h = location.hash, j = h === "#join" || h === "#code";
+    var steps = !!h && h !== "#welcome" && !j;
+    if(steps && !hasAccess()){ j = true; steps = false; }
+    document.documentElement.classList.toggle("on-join", j);
     document.documentElement.classList.toggle("on-steps", steps);
+    if(j){ var t = document.getElementById(h === "#code" ? "code" : "join"); if(h === "#code") t.scrollIntoView({block:"start"}); else window.scrollTo(0, 0); return; }
+    var acc = hasAccess();
+    document.getElementById("wGo").setAttribute("href", acc ? "#steps" : "#join");
+    document.getElementById("wHave").hidden = acc;
+    document.getElementById("wNote").hidden = acc;
+    var cur0 = current(), cnt0 = 0; for(var k = 1; k <= N; k++) if(done[k]) cnt0++;
+    document.getElementById("wGoT").textContent = !acc ? "הצטרפות · 50 ₪" : !cur0 ? "לשלבים · כולם הושלמו" : cnt0 ? "ממשיכים משלב " + cur0 : "מתחילים את חמשת השלבים";
     if(location.hash === "#steps") window.scrollTo(0, 0);
     else if(steps){
       var target = document.getElementById(location.hash.slice(1));
       if(target) target.scrollIntoView({block:"start"});
     }
   }
-  var cur0 = current(), cnt0 = 0; for(var k = 1; k <= N; k++) if(done[k]) cnt0++;
-  document.getElementById("wGoT").textContent = !cur0 ? "לשלבים · כולם הושלמו" : cnt0 ? "ממשיכים משלב " + cur0 : "מתחילים עם הכלים החינמיים";
+
   window.addEventListener("hashchange", view);
   view();
 })();
